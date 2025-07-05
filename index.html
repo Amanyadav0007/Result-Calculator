@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>Result Calculator 😨</header>
+
+    <div class="container">
+        <div class="result-card">
+            <div class="card-box" onclick="showSection('sgpa')">SGPA Calculator</div>
+            <div class="card-box" onclick="showSection('cgpa')">CGPA Calculator</div>
+            <div class="card-box" onclick="showSection('convert')">CGPA to % Converter</div>
+        </div>
+
+        <div id="sgpa" class="common">
+            <h2>Enter Subject Details for SGPA</h2>
+            <table id="sgpa-table">
+                <tr>
+                    <th>Subject</th>
+                    <th>Credits</th>
+                    <th>Grade</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+            <button class="btn" onclick="addSgpaRow()">+ Add Subject</button>
+            <button class="btn" onclick="calculateSgpa()">Calculate SGPA</button>
+            <div class="result" id="sgpa-result"></div>
+        </div>
+
+        <div id="cgpa" class="common">
+            <h2>Enter Semester Details CGPA</h2>
+            <table id="cgpa-table">
+                <tr>
+                    <th>Semester</th>
+                    <th>SGPA</th>
+                    <th>Credits</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+            <button class="btn" onclick="addCgpaRow()">+ Add Semester</button>
+            <button class="btn" onclick="calculateCgpa()">Calculate CGPA</button>
+            <div class="result" id="cgpa-result"></div>
+        </div>
+
+        <div id="convert" class="common">
+            <h2>Convert CGPA to Percentage</h2>
+            <input type="number" id="cgpa-input" step="0.01" placeholder="Enter CGPA">
+            <button class="btn" onclick="ConvertCgpatToPercentage()">Convert</button>
+            <div class="result" id="converter-result"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Made with ❤️ by Aman Yadav</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
